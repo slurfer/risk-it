@@ -19,3 +19,23 @@ function home(){
     document.getElementById(active_question).style='display: none;';
     document.getElementById('gameboard').style='display: block';
 }
+
+function transition(transition_number){
+    // alert('ahoj');
+    if(transition_number==0){
+        setTimeout(second_transition_0, 750)
+    }
+    else if(transition_number==1){
+        setTimeout(second_transition_1, 750)
+    }
+    document.getElementById('transition').style='left:-75vw;top:-100vh;';
+}
+
+function second_transition_0() {
+    document.getElementById('transition').style='transition-duration:1.7s;left:200vw;top:300vh;';
+    document.getElementById('transition').style='transition-duration:0.75s;';
+}
+
+function second_transition_1() {
+    document.getElementById('transition').style='left:-200vw;top:-300vh;';
+}
