@@ -44,3 +44,34 @@ td:hover{
     background-color: lightgray;
     border-color: lightgray;
 }
+
+@media screen and (max-width: 700px) {
+    body{
+        font-size: 15px;
+        width: 426px;
+        height: 156px;
+    }
+
+    #question{
+        border-radius: 7px;
+        height: 37px;
+    }
+
+    #answers{
+        margin: 5px;
+    }
+
+    table{
+        border-spacing:5px;
+    }
+
+    tr{
+        margin-left: 25px;
+    }
+
+    td{
+        border-radius: 7px;
+        height: 25px;
+        width: 150px;
+    }
+}

@@ -2,6 +2,7 @@ body{
     font-size: 40px;
     padding: 0px;
     margin: 0px;
+    align-items: center;
 }
 main{
     margin: 0px;
@@ -13,7 +14,6 @@ main{
     margin: auto;
     /* margin-top: 250px; */
     position: relative;
-    vertical-align: middle;
 }
 
 #gameboard{
@@ -54,14 +54,16 @@ td:hover{
     /*display: none;*/
 }
 iframe{
-    margin: 10px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-style: solid;
     border-color: #4DB6AC;
     border-radius: 15px;
     width: 900px;
     height: 400px;
     display: none;
-    position: absolute;
+    position: static;
 }
 footer{
     position: absolute;
@@ -83,12 +85,53 @@ footer{
     height: 40px;
     width: 120px;
     text-align: center;
-    bottom: 0px;
-    right: 0px;
+    bottom: 10px;
+    right: 220px;
     position: absolute;
     display: none;
 }
 #home:hover{
     background-color: lightgray;
     border-color: lightgray;
+}
+
+@media screen and (max-width: 1400px) {
+    body{
+        font-size: 20px;
+    }
+    #central{
+        width: 650px;
+        height: 200px;
+    }
+
+    #gameboard{
+        margin: 25px;
+    }
+    td{
+        border-radius: 7px;
+        width: 100px;
+        height: 35px;
+    }
+
+    iframe{
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-radius: 7px;
+        width: 450px;
+        height: 220px;
+    }
+
+    footer{
+        height: 10px;
+    }
+
+    #home{
+        font-size: 15px;
+        border-radius: 15px;
+        height: 20px;
+        width: 60px;
+        bottom: -15px;
+        right: 105px;
+    }
 }
