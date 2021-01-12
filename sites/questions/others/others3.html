@@ -2,24 +2,29 @@
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <title>Riskuj - Dusík a Fosfor</title>
+        <title>Pro Vás</title>
         <link rel="stylesheet" type="text/css" href="../../../styles/question.css">
         <link rel="shortcut icon" type="image/x-icon" href="../img/icon.ico">
         <script src="../../../scripts/questions.js"></script>
+        <style>td{width: 500px;}</style>
     </head>
     <body>
-        <div id="question">Můžeme najít čistý Fosfor v přírodě?</div>
+        <div id="question">Kolik stojí čerstvý salát z naší jídelny?</div>
         <div id="answers">
             <table>
                 <tr>
-                    <td onclick="control('a1', 'f')" id="a1" style="width: 650px;">Ano, běžně se těží v hlubinných dolech</td>
+                    <td onclick="control('a1', 'f', 3000)" id="a1">13Kč</td>
+                </tr>
+                <tr >
+                    <td onclick="control('a2', 'f', 3000)" id="a2">31Kč</td>
                 </tr>
                 <tr>
-                    <td onclick="control('a2', 't')" id="a2" style="width: 650px;">Víme pouze o jednom takovém nálezu</td>
+                    <td onclick="control('a3', 'f', 3000)" id="a3">32Kč</td>
                 </tr>
                 <tr>
-                    <td onclick="control('a3', 'f')" id="a3" style="width: 650px;">Fosfor lze získat pouze v laboratoři</td>
+                    <td onclick="control('a4', 't', 3000)" id="a4">35Kč</td>
                 </tr>
             </table>
         </div>
     </body>
+</html>

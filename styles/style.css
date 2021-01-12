@@ -2,27 +2,20 @@ body{
     font-size: 40px;
     padding: 0px;
     margin: 0px;
+    align-items: center;
 }
 main{
     margin: 0px;
 }
-#players{
-    height: 50px;
-    margin: 5px;
-}
-#player1{
-    float: left;
-}
-#player2{
-    float: right;
-}
+
 #central{
-    width: 900px;
-    height: 360px;
+    width: 1300px;
+    height: 400px;
     margin: auto;
-    margin-top: 250px;
+    /* margin-top: 250px; */
     position: relative;
 }
+
 #gameboard{
     margin: 50px;
     display: block;
@@ -46,6 +39,10 @@ td{
 td:hover{
     background-color: lightgray;
 }
+
+.category{
+    width: 300px;
+}
 .question{
     border-style: solid;
     border-color: #4DB6AC;
@@ -61,8 +58,8 @@ iframe{
     border-style: solid;
     border-color: #4DB6AC;
     border-radius: 15px;
-    width: 874px;
-    height: 334px;
+    width: 900px;
+    height: 400px;
     display: none;
     position: absolute;
 }
@@ -86,8 +83,8 @@ footer{
     height: 40px;
     width: 120px;
     text-align: center;
-    bottom: 29px;
-    right: 29px;
+    bottom: 0px;
+    right: 0px;
     position: absolute;
     display: none;
 }
