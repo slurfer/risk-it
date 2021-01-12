@@ -2,7 +2,6 @@ body{
     font-size: 40px;
     padding: 0px;
     margin: 0px;
-    align-items: center;
 }
 main{
     margin: 0px;
@@ -14,6 +13,7 @@ main{
     margin: auto;
     /* margin-top: 250px; */
     position: relative;
+    vertical-align: middle;
 }
 
 #gameboard{
