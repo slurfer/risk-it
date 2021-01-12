@@ -2,22 +2,28 @@ body{
     font-size: 40px;
     padding: 0px;
     margin: 0px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 main{
     margin: 0px;
+    position: relative;
+    bottom: 50px;
 }
 
 #central{
     width: 1300px;
-    height: 400px;
+    height: 482px;
     margin: auto;
     /* margin-top: 250px; */
-    position: relative;
+    vertical-align: central;
+    /* position: relative; */
 }
 
 #gameboard{
-    margin: 50px;
+    margin: 0px;
     display: block;
 }
 tr{
@@ -85,7 +91,7 @@ footer{
     height: 40px;
     width: 120px;
     text-align: center;
-    bottom: 10px;
+    bottom: 90px;
     right: 220px;
     position: absolute;
     display: none;
@@ -101,11 +107,11 @@ footer{
     }
     #central{
         width: 650px;
-        height: 200px;
+        height: 272px;
     }
 
     #gameboard{
-        margin: 25px;
+        margin: 0px;
     }
     td{
         border-radius: 7px;
