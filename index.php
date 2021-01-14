@@ -1,6 +1,6 @@
 <?php 
 if( isset( $_COOKIE['Verification'])){
-     include("./sites/game.html");
+     include("./sites/intro/intro.html");
 }
 else{
      include("./sites/not_verified.html");
