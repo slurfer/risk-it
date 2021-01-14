@@ -20,8 +20,15 @@ function home(){
     document.getElementById('gameboard').style='display: block';
 }
 
-function transition(transition_number){
+
+function start_slide_show(){
+    document.getElementById('main').style.setProperty('display', 'none', 'important');
+}
+
+
+function to_game(){
     // alert('ahoj');
+    transition_number = 0;
     if(transition_number==0){
         setTimeout(second_transition_0, 750)
     }
@@ -32,7 +39,8 @@ function transition(transition_number){
 }
 
 function second_transition_0() {
-    document.getElementById('button_play').style.display='none';
+    document.getElementById('begining').style.display='none'
+    document.getElementById('main').style.removeProperty('display');
     document.getElementById('transition').style='transition-duration:1.7s;left:200vw;top:300vh;';
     // document.getElementById('transition').style='transition-duration:0.75s;';
 }
@@ -40,14 +48,13 @@ function second_transition_0() {
 function second_transition_1() {
     document.getElementById('transition').style='left:-200vw;top:-300vh;';
 }
-
+/*---------------Welcome message-------------------*/
 function slide_show(){
     document.getElementById('button_play').style.opacity='1';
     document.getElementById('button_play').style.transitionDuration='0.5s';
     document.getElementById('button_play').style.transition='opacity 0.5s ease-in-out;'
     document.getElementById('button_play').style.opacity='0';
-
-    setTimeout(slide_show_01, 1000)
+    setTimeout(slide_show_01, 500)
 }
 
 function slide_show_01(){
@@ -55,12 +62,39 @@ function slide_show_01(){
     document.getElementById('message_1').style.display='flex';
     document.getElementById('message_1').style.opacity='0';
     document.getElementById('message_1').style.transitionDuration='0.5s';
-    setTimeout(slide_show_02, 500)
+    document.getElementById('button_next_1').style.display='flex';
+    document.getElementById('button_next_1').style.opacity='0';
+    document.getElementById('button_next_1').style.transitionDuration='0.5s';
+    setTimeout(slide_show_02, 50)
 }
 
 function slide_show_02(){
     document.getElementById('message_1').style.transition='opacity 0.5s ease-in-out;'
     document.getElementById('message_1').style.opacity='1';
-    setTimeout(slide_show_02, 1000)
+    document.getElementById('button_next_1').style.transition='opacity 0.5s ease-in-out;'
+    document.getElementById('button_next_1').style.opacity='1';
 }
 
+/*---------------Game rules-------------------*/
+function slide_show_03(){
+    document.getElementById('message_1').style.opacity='1';
+    document.getElementById('message_1').style.transitionDuration='0.5s';
+    document.getElementById('message_1').style.transition='opacity 0.5s ease-in-out;'
+    document.getElementById('message_1').style.opacity='0';
+    setTimeout(slide_show_04, 500)
+}
+
+function slide_show_04(){
+    document.getElementById('message_1').style.display='none';
+    document.getElementById('button_next_1').style.display='flex';
+    document.getElementById('message_2').style.display='flex';
+    document.getElementById('message_2').style.opacity='0';
+    document.getElementById('message_2').style.transitionDuration='0.5s';
+    document.getElementById('button_next_2').style.display='flex';
+    setTimeout(slide_show_05, 50)
+}
+
+function slide_show_05(){
+    document.getElementById('message_2').style.transition='opacity 0.5s ease-in-out;'
+    document.getElementById('message_2').style.opacity='1';
+}

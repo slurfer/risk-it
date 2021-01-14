@@ -1,4 +1,4 @@
-body{
+#begining{
     padding: 0px;
     margin: 0;
     width: 100vw;
@@ -9,6 +9,8 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: fixed;
+    z-index: 1;
 }
 
 #transition{
@@ -21,8 +23,9 @@ body{
     transition: left 0.75s, top 0.75s;
     background-color: #ef6c00;
     transition-timing-function: ease-in-out;
-    z-index: 1;
+    z-index: 2;
 }
+
 
 .pop_up{
     background-color: #ffffff;
@@ -55,3 +58,36 @@ body{
     background-color: lightgray;
 }
 
+.button_next{
+    position: absolute;
+    bottom: 80px;
+    right: 80px;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#button_next_1 img{
+    width: 80px;
+    height: 80px;
+}
+
+#button_next_2 img{
+    width: 50px;
+    height: 50px;
+}
+
+.button_next:hover{
+    scale: 1.1;
+    background-color: lightgray;
+}
+
+#message_2{
+    width: 1000px;
+    height: 500px;
+    font-size: 40px;
+}

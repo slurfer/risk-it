@@ -4,12 +4,32 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <title>Pro Vás</title>
         <link rel="stylesheet" type="text/css" href="./styles/style.css">
+        <link rel="stylesheet" type="text/css" href="./styles/intro.css">
         <link rel="shortcut icon" type="image/x-icon" href="../img/icon.ico">
         <script src="./scripts/main.js">
         </script>
     </head>
-    <body>
-        <main>
+    <body onload="start_slide_show();">
+        <div id="transition">
+        </div>
+        <div id="begining">
+            <div class="pop_up" id="button_play" onclick="slide_show();">
+                Rozbalit dárek
+            </div>
+            <!-- Welkome message -->
+            <div class="pop_up" id="message_1">
+                Milé PMP4,<br>
+                přemýšleli jsme, čím bychom Vám udělali radost. Napadlo nás, že v dnešní době více oceníte nějaký zážitek, než hmotný dárek. Vytvořili jsme tedy pro Vás tuto hru, doufáme, že si ji užijete.
+            </div>
+            <div class="button_next" onclick="slide_show_03()" id="button_next_1"><img src="./img/next_icon.png" alt="Button next"></div>
+            <!-- Rules -->
+            <div class="pop_up" id="message_2">
+                Pravidla<br>
+                Rodělíte se do dvou početně stejně velkých skupin. Skupina, která bude na tahu si vybere z herního plánu políčko podle svého výběru. Následně dostane otázku, kterou se pokusí zodpovědět. Pokud odpoví správně, dostane počet bodů, podle hodnoty otázky. Hodnota každé otázky je napsaná na herním plánu.
+            </div>
+            <div class="button_next" onclick="to_game();" id="button_next_2"><img src="./img/play_button.png" alt="Button next"></div>
+        </div>
+        <main id="main">
             <!-- <div id="players">
                 <div id="player1">dfasf</div>
                 <div id="player2">fdfad</div>
