@@ -39,3 +39,7 @@ function second_transition_0() {
 function second_transition_1() {
     document.getElementById('transition').style='left:-200vw;top:-300vh;';
 }
+
+function test_savgame(){
+    
+}
