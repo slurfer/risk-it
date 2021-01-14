@@ -1,15 +1,8 @@
-/*<?php
-    include("./sites/game.html");
-?>*/
-
-
 <?php 
-if( isset( $_COOKIE['cookiename']  ) )
-{
-     var_dump($_COOKIE ); 
+if( isset( $_COOKIE['Verification'])){
+     include("./sites/game.html");
 }
-else
-{
-     echo 'no cookie for you!';
+else{
+     include("./sites/not_verified.html");
 }
-?> 
+?>
