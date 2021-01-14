@@ -5,3 +5,4 @@ function control(element, isCorrect, value){
           document.getElementById(element).style='color: black; background-color: red; border-color: red;';
       }
 }
+
