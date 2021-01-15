@@ -7,8 +7,6 @@ function control(element, isCorrect, value){
       }
 }
 
-<<<<<<< HEAD
-=======
 var team_1 = true //If true = team 1, If false = team 2
 var points_1 = 0 //points of team 1
 var points_2 = 0 //points team 2
@@ -28,4 +26,3 @@ function pointscnt(points){
         alert('Error');
     }
 }
->>>>>>> b49e256560086abe91c86f6a3aba737bd626a3a5
