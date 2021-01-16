@@ -7,21 +7,6 @@ function control(element, isCorrect, value){
       }
 }
 
-<<<<<<< Updated upstream
-var team_1 = true //If true = team 1, If false = team 2
-var points_1 = 0 //points of team 1
-var points_2 = 0 //points team 2
-
-function pointscnt(points){
-    if(team_1){
-        points_1 += points;
-        team_1 = false;
-    }
-
-    else if(!team_1){
-        points_2 += points;
-        team_1 = true;
-=======
 var points_1 = 0;//points of team 1
 var points_2 = 0; //points team 2
 
@@ -56,7 +41,6 @@ function pointscnt(points){
         points_2 += (points);
         sessionStorage.points_2 = points_2;
         sessionStorage.team_1 = true;
->>>>>>> Stashed changes
     }
 
     else{
