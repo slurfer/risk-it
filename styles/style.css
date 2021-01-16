@@ -102,6 +102,30 @@ footer{
     border-color: lightgray;
 }
 
+.player{
+    width: 125px;
+    height: 125px;
+    position: fixed;
+    background-color: #4DB6AC;
+    display: none;
+    top: -15px;
+    border-radius: 15px;
+    padding-top: 15px;
+    justify-content: center;
+    align-items: center;
+    color: #ef6c00;
+}
+
+#player_1{
+    left: -15px;
+    padding-left: 15px;
+}
+
+#player_2{
+    right: -15px;
+    padding-right: 15px;
+}
+
 @media screen and (max-width: 1400px) {
     body{
         font-size: 20px;

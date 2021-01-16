@@ -46,8 +46,10 @@ function to_game(){
 }
 
 function second_transition_0() {
-    document.getElementById('begining').style.display='none'
+    document.getElementById('begining').style.display='none';
     document.getElementById('main').style.removeProperty('display');
+    document.getElementById('player_1').style.display='flex';
+    document.getElementById('player_2').style.display='flex';
     document.getElementById('transition').style='transition-duration:1.7s;left:200vw;top:300vh;';
     // document.getElementById('transition').style='transition-duration:0.75s;';
 }
@@ -115,6 +117,7 @@ function test_savgame(){
         sessionStorage.save = " ";
     }
     else{
+        to_game();
         var string = sessionStorage.save;
         var string_split = string.split(",");
         for(i = 0; i < string_split.length; i++){
