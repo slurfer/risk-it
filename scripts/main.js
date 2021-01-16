@@ -113,6 +113,7 @@ function savgame(){
 }
 
 function test_savgame(){
+    sessionStorage.save = " ";
     if(!sessionStorage.save){
         sessionStorage.save = " ";
     }

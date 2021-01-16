@@ -162,7 +162,25 @@ footer{
         border-radius: 15px;
         height: 20px;
         width: 60px;
-        bottom: -15px;
+        bottom: 55px;
         right: 105px;
+    }
+
+    .player{
+        width: 62px;
+        height: 62px;
+        top: -7px;
+        border-radius: 7px;
+        padding-top: 7px;
+    }
+    
+    #player_1{
+        left: -7px;
+        padding-left: 7px;
+    }
+    
+    #player_2{
+        right: -7px;
+        padding-right: 7px;
     }
 }
