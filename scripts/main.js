@@ -4,7 +4,6 @@ var active_question = ""
 function loading(){
     start_slide_show();
     test_savgame();
-    scoredraw();
 }
 
 function test(id, question_div){
@@ -109,8 +108,6 @@ function slide_show_05(){
     document.getElementById('message_2').style.opacity='1';
 }
 
-/* ---------- Saving and restoring game ------------------- */
-
 function savgame(){
     sessionStorage.save = visited_ids;
 }
@@ -119,8 +116,6 @@ function test_savgame(){
     sessionStorage.save = " ";
     if(!sessionStorage.save){
         sessionStorage.save = " ";
-        sessionStorage.points_1 = 0;
-        sessionStorage.points_2 = 0;
     }
     else{
         to_game();
@@ -130,22 +125,5 @@ function test_savgame(){
             document.getElementById(string_split[i]).style='opacity: 0.3;';
             visited_ids.push(string_split[i]);
         }
-    }
-}
-
-/* ----------- Score drawing -----------*/
-
-function scoredraw(){
-    document.getElementById(player_1).innerHTML = sessionStorage.points_1;
-    document.getElementById(player_2).innerHTML = sessionStorage.points_2;
-    player1 = sessionStorage.player_1;
-    if(player1 == 'true'){
-        document.getElementById(player_1).style.backgroundColor = '#8fe9e0';
-    }
-    else if(player1 == 'false'){
-        document.getElementById(player_2).style.backgroundColor = '#8fe9e0';
-    }
-    else{
-        alert('Error(invalid string content)');
     }
 }
