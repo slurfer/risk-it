@@ -1,5 +1,11 @@
 var visited_ids = [];
 var active_question = ""
+
+function loading(){
+    start_slide_show();
+    test_savgame();
+}
+
 function test(id, question_div){
     if (visited_ids.includes(id)){
     }else{
@@ -112,6 +118,7 @@ function test_savgame(){
         var string = sessionStorage.save;
         var string_split = string.split(",");
         for(i = 0; i < string_split.length; i++){
+            document.getElementById(string_split[i]).style='opacity: 0.3;';
             visited_ids.push(string_split[i]);
         }
     }
