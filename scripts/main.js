@@ -10,7 +10,8 @@ function test(id, question_div){
         document.getElementById(question_div).style='display: block';
         document.getElementById('home').style='display: block';
         document.getElementById('gameboard').style='display: none';
-        active_question = question_div
+        active_question = question_div;
+        savgame();
     }
 }
 function home(){
@@ -40,6 +41,19 @@ function second_transition_1() {
     document.getElementById('transition').style='left:-200vw;top:-300vh;';
 }
 
+function savgame(){
+    sessionStorage.save = visited_ids;
+}
+
 function test_savgame(){
-    
+    if(!sessionStorage.save){
+        sessionStorage.save = " ";
+    }
+    else{
+        var string = sessionStorage.save;
+        var string_split = string.split(",");
+        for(i = 0; i < string_split.length; i++){
+            visited_ids.push(string_split[i]);
+        }
+    }
 }
