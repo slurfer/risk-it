@@ -10,6 +10,7 @@ body{
     height: 312px;
 
 }
+
 #question{
     border-style: solid;
     border-color: white;
@@ -19,16 +20,20 @@ body{
     height: 75px;
     text-align: center;
 }
+
 #answers{
     margin: 10px;
 }
+
 table{
     border-spacing:10px;
 }
+
 tr{
     margin-left: 50px;
     padding: 0;
 }
+
 td{
     border-style: solid;
     border-color: white;
@@ -40,9 +45,32 @@ td{
     width: 300px;
     text-align: center;
 }
+
 td:hover{
     background-color: lightgray;
     border-color: lightgray;
+}
+
+.question_image_container{
+    position: absolute;
+    top: 110px;
+    right: 35px;
+    width: 250px;
+    height: 188px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question_image_width{
+    width: 100%;
+}
+
+.question_image_height{
+    height: 100%;
 }
 
 @media screen and (max-width: 700px) {
@@ -73,5 +101,14 @@ td:hover{
         border-radius: 7px;
         height: 25px;
         width: 150px;
+    }
+
+    .question_image_container{
+        top: 55px;
+        right: 17px;
+        width: 125px;
+        height: 94px;
+        padding: 7px;
+        border-radius: 7px;
     }
 }
