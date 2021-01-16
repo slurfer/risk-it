@@ -12,14 +12,17 @@ var points_1 = 0 //points of team 1
 var points_2 = 0 //points team 2
 
 function pointscnt(points){
+    sessionStorage.team_1 = team_1
     if(team_1){
         points_1 += points;
         team_1 = false;
+        sessionStorage.points_1 = points_1
     }
 
     else if(!team_1){
         points_2 += points;
         team_1 = true;
+        sessionStorage.points_2 = points_2
     }
 
     else{
