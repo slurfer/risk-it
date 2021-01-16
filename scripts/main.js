@@ -10,7 +10,8 @@ function test(id, question_div){
         document.getElementById(question_div).style='display: block';
         document.getElementById('home').style='display: block';
         document.getElementById('gameboard').style='display: none';
-        active_question = question_div
+        active_question = question_div;
+        savgame();
     }
 }
 function home(){
@@ -97,4 +98,21 @@ function slide_show_04(){
 function slide_show_05(){
     document.getElementById('message_2').style.transition='opacity 0.5s ease-in-out;'
     document.getElementById('message_2').style.opacity='1';
+}
+
+function savgame(){
+    sessionStorage.save = visited_ids;
+}
+
+function test_savgame(){
+    if(!sessionStorage.save){
+        sessionStorage.save = " ";
+    }
+    else{
+        var string = sessionStorage.save;
+        var string_split = string.split(",");
+        for(i = 0; i < string_split.length; i++){
+            visited_ids.push(string_split[i]);
+        }
+    }
 }
