@@ -19,16 +19,6 @@ points_2 = parseInt(sessionStorage.points_2);
 
 
 function pointscnt(points){
-<<<<<<< HEAD
-    if(team_1){
-        points_1 += points;
-        team_1 = false;
-    }
-
-    else if(!team_1){
-        points_2 += points;
-        team_1 = true;
-=======
     if(sessionStorage.team_1 == 'true'){
         points_1 += (points);
         sessionStorage.points_1 = points_1;
@@ -39,7 +29,6 @@ function pointscnt(points){
         points_2 += (points);
         sessionStorage.points_2 = points_2;
         sessionStorage.team_1 = true;
->>>>>>> 721f311c04342268d16e504fee73ae98d044d345
     }
 
     else{
