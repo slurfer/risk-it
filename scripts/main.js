@@ -4,6 +4,7 @@ var active_question = ""
 function loading(){
     start_slide_show();
     test_savgame();
+    scoredraw();
 }
 
 function test(id, question_div){
@@ -13,6 +14,7 @@ function test(id, question_div){
         document.getElementById(id).style='opacity: 0.3;';
         visited_ids.push(id);
         // display question and hide gameboard
+        sessionStorage.first_try='true';
         document.getElementById(question_div).style='display: block';
         document.getElementById('home').style='display: block';
         document.getElementById('gameboard').style='display: none';
@@ -25,6 +27,7 @@ function home(){
     document.getElementById('home').style='display: none;';
     document.getElementById(active_question).style='display: none;';
     document.getElementById('gameboard').style='display: block';
+    scoredraw();
 }
 
 
@@ -113,7 +116,6 @@ function savgame(){
 }
 
 function test_savgame(){
-    sessionStorage.save = " ";
     if(!sessionStorage.save){
         sessionStorage.save = " ";
     }
@@ -122,8 +124,40 @@ function test_savgame(){
         var string = sessionStorage.save;
         var string_split = string.split(",");
         for(i = 0; i < string_split.length; i++){
-            document.getElementById(string_split[i]).style='opacity: 0.3;';
+            document.getElementById(string_split[i]).style.opacity='0.3';
             visited_ids.push(string_split[i]);
         }
+    }
+}
+
+/* ----------- Score drawing -----------*/
+
+function scoredraw(){
+    //check whether variable exist, if not create one
+    //players
+    if(!sessionStorage.team_1){
+        sessionStorage.team_1 = 'true'; //If true = team 1, If false = team 2
+    }
+    //points
+    if(!sessionStorage.points_1){
+        sessionStorage.points_1 = '0';
+    }
+    if(!sessionStorage.points_2){
+        sessionStorage.points_2 = '0';
+    }
+
+    //drawing
+    document.getElementById('player_1').innerHTML = sessionStorage.points_1;
+    document.getElementById('player_2').innerHTML = sessionStorage.points_2;
+    if(sessionStorage.team_1 == 'true'){
+        document.getElementById('player_1').style.backgroundColor='#ff0000';
+        document.getElementById('player_2').style.backgroundColor='#4DB6AC';
+    }
+    else if(sessionStorage.team_1 == 'false'){
+        document.getElementById('player_2').style.backgroundColor='#ff0000';
+        document.getElementById('player_1').style.backgroundColor='#4DB6AC';
+    }
+    else{
+        alert('Error(invalid string content - ' + sessionStorage.team_1 + ')');
     }
 }
