@@ -4,7 +4,6 @@ var active_question = ""
 function loading(){
     start_slide_show();
     test_savgame();
-    scoredraw();
 }
 
 function test(id, question_div){
@@ -117,9 +116,6 @@ function test_savgame(){
     sessionStorage.save = " ";
     if(!sessionStorage.save){
         sessionStorage.save = " ";
-        sessionStorage.points_1 = '0';
-        sessionStorage.points_2 = '0';
-        sessionStorage. = '0';
     }
     else{
         to_game();
